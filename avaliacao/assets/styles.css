@@ -1,0 +1,505 @@
+/* === GERAL === */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1b2838;
+    color: #c7d5e0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* === HEADER === */
+.header {
+    background-color: #171a21;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    color: #66c0f4;
+}
+
+.header nav a,
+.header nav span {
+    margin-left: 20px;
+    color: #c7d5e0;
+    font-weight: bold;
+}
+
+.header nav a:hover {
+    color: #66c0f4;
+}
+
+/* === MAIN CONTENT === */
+.main-content {
+    padding: 30px;
+}
+
+
+.produto-card:hover {
+    transform: translateY(-5px); /* Efeito de levantar no hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Sombra mais intensa no hover */
+}
+
+
+.produto-card h3 {
+    font-size: 1.3em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #66c0f4; /* Cor do título do jogo */
+
+}
+
+.produto-card p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    color: #c7d5e0; /* Cor do texto do preço */
+}
+
+
+
+
+/* === PRODUTOS / CATÁLOGO === */
+.section-title {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #66c0f4;
+}
+
+.produtos {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.produto-card {
+    background: #1b2838;
+    padding: 15px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    text-align: center;
+}
+
+.produto-card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+.produto-card button {
+    background-color: #66c0f4;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    color: #000;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* === DESTAQUE / PROMOÇÃO === */
+.destaque {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    background: #171a21;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 10px #000;
+}
+
+.destaque-info {
+    color: white;
+    max-width: 50%;
+}
+
+.destaque-info h2 {
+    color: #66c0f4;
+}
+
+.destaque-img {
+    flex-shrink: 0;
+}
+
+.destaque-img img {
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.original {
+    text-decoration: line-through;
+    color: #ccc;
+    margin-right: 10px;
+}
+
+.desconto {
+    color: #66c0f4;
+    font-weight: bold;
+}
+
+/* === CARRINHO === */
+.carrinho-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.carrinho-item {
+    display: flex;
+    background: #1e1e2f;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    align-items: center;
+    gap: 20px;
+    color: #fff;
+}
+
+.carrinho-item img {
+    width: 180px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.carrinho-item .info {
+    flex: 1;
+}
+
+.carrinho-item .info h3 {
+    margin: 0 0 8px;
+    font-size: 18px;
+}
+
+.carrinho-item .info p {
+    margin: 4px 0;
+}
+
+.carrinho-item a {
+    display: inline-block;
+    margin-top: 10px;
+    background: #ff5555;
+    color: white;
+    padding: 6px 12px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.carrinho-item a:hover {
+    background: #ff0000;
+}
+
+.btn-finalizar {
+    display: inline-block;
+    background: #4caf50;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-finalizar:hover {
+    background: #45a049;
+}
+
+/* === FORMULÁRIOS (login/register/forgot/reset) === */
+.form-box {
+    max-width: 400px;
+    margin: 30px auto;
+    background: #2a475e; /* Fundo mais escuro para o formulário */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.6); /* Sombra mais intensa */
+    display: flex;
+    flex-direction: column;
+    gap: 18px; /* Aumenta um pouco o espaçamento entre os campos */
+}
+
+/* Estilo para todos os inputs e textareas dentro do form-box */
+.form-box input[type="text"],
+.form-box input[type="email"],
+.form-box input[type="password"],
+.form-box input[type="file"],
+.form-box textarea {
+    width: 100%;
+    padding: 12px; /* Aumenta o padding para um campo maior */
+    border: 1px solid #3a5c7c; /* Borda sutil */
+    border-radius: 6px; /* Borda ligeiramente mais arredondada */
+    background: #1b2838;
+    color: #e0e0e0; /* Cor do texto dentro do input */
+    box-sizing: border-box;
+    font-size: 1em; /* Garante tamanho de fonte consistente */
+}
+
+/* Estilo de foco para inputs e textareas */
+.form-box input[type="text"]:focus,
+.form-box input[type="email"]:focus,
+.form-box input[type="password"]:focus,
+.form-box input[type="file"]:focus,
+.form-box textarea:focus {
+    outline: none; /* Remove a borda de foco padrão do navegador */
+    border-color: #66c0f4; /* Borda azul brilhante no foco */
+    box-shadow: 0 0 8px rgba(102, 192, 244, 0.6); /* Sombra azul para o foco */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transição suave para o foco */
+}
+
+/* Estilo para o placeholder */
+.form-box input::placeholder,
+.form-box textarea::placeholder {
+    color: #8899a6; /* Cor mais clara para o texto do placeholder */
+    opacity: 1; /* Garante que o placeholder seja visível em todos os navegadores */
+}
+
+.form-box label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Aumenta o espaçamento entre o label e o input */
+    font-weight: bold;
+    color: #c7d5e0;
+    font-size: 0.95em; /* Ajusta o tamanho da fonte do label */
+}
+
+.form-box button {
+    background-color: #66c0f4;
+    border: none;
+    padding: 12px 15px; /* Aumenta o padding do botão */
+    border-radius: 6px; /* Mais arredondado */
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 15px; /* Mais espaço acima do botão */
+    font-size: 1.1em; /* Aumenta o tamanho da fonte do botão */
+    transition: background-color 0.2s ease, transform 0.1s ease; /* Transição para hover e clique */
+}
+
+.form-box button:hover {
+    background-color: #88d4ff;
+}
+
+.form-box button:active {
+    transform: translateY(1px); /* Pequeno efeito de "pressionar" ao clicar */
+}
+
+/* Estilo para inputs de arquivo */
+.form-box input[type="file"] {
+    padding: 8px; /* Um pouco menos de padding para file inputs */
+    background-color: #2a475e; /* Cor de fundo diferente para file inputs */
+    border: 1px dashed #66c0f4; /* Borda tracejada para indicar upload */
+    color: #66c0f4;
+    cursor: pointer;
+}
+
+.form-box input[type="file"]::file-selector-button {
+    background-color: #1b2838;
+    color: #66c0f4;
+    border: 1px solid #3a5c7c;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.form-box input[type="file"]::file-selector-button:hover {
+    background-color: #2a475e;
+}
+
+/* Ajustes para os links abaixo dos formulários */
+.main-content p a {
+    color: #66c0f4; /* Cor dos links */
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.main-content p a:hover {
+    color: #88d4ff;
+}
+
+/* === IMAGENS GERAIS === */
+.banner {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    display: block;
+    margin: 0 auto;
+}
+
+.thumb {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto 10px;
+}
+ 
+/* === BOTAO ADICIONAR CARRINHO === */
+
+.btn-add-to-cart { /* Nova classe para o botão */
+    background-color: #66c0f4;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    color: #000;
+    cursor: pointer;
+    font-weight: bold;
+    /* Para centralizar ou alinhar, se necessário, você pode adicionar display: block; margin: 10px auto; se ele estiver dentro de um elemento de bloco */
+}
+
+/* === ERRO E SUCESSO === */
+.erro {
+    color: #ff5555;
+    background-color: #ffe0e0; /* Cor de fundo para melhor destaque */
+    border: 1px solid #ff5555;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 400px; /* Mesma largura do formulário para alinhar */
+}
+
+.sucesso { /* NOVA REGRA */
+    color: #4CAF50; /* Verde */
+    background-color: #e0ffe0; /* Fundo verde claro */
+    border: 1px solid #4CAF50;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 400px; /* Mesma largura do formulário para alinhar */
+}
+
+/* === MEDIA QUERIES para Responsividade === */
+
+/* Tablets e dispositivos menores que 768px */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Empilha logo e navegação */
+        align-items: flex-start; /* Alinha tudo à esquerda no header */
+    }
+    .header nav {
+        width: 100%; /* Navegação ocupa toda a largura */
+        justify-content: flex-start; /* Alinha links à esquerda */
+        margin-top: 10px;
+        gap: 15px;
+    }
+    .main-content {
+        padding: 20px; /* Reduz o padding lateral em telas menores */
+    }
+    .destaque {
+        flex-direction: column; /* Empilha info e imagem */
+        text-align: center;
+        padding: 20px;
+    }
+    .destaque-info,
+    .destaque-img {
+        max-width: 100%; /* Ocupa a largura total */
+        flex-basis: 100%;
+        min-width: auto;
+    }
+    .destaque-img {
+        text-align: center; /* Centraliza a imagem */
+    }
+    .destaque-info h2 {
+        font-size: 1.8em; /* Ajusta tamanho da fonte */
+    }
+    .produto-card {
+        width: 100%; /* Cards de produto ocupam a largura total em telas menores */
+        max-width: 400px; /* Limita a largura máxima para não esticar demais em tablets */
+        margin: 0 auto; /* Centraliza os cards */
+    }
+    .carrinho-item {
+        flex-direction: column; /* Empilha imagem e info do item do carrinho */
+        align-items: center;
+        text-align: center;
+    }
+    .carrinho-item .info {
+        text-align: center; /* Centraliza o texto no item do carrinho */
+    }
+    .form-box {
+        margin: 20px; /* Mais padding nas laterais */
+    }
+    .erro, .sucesso {
+        margin: 15px 20px; /* Ajusta margens para telas menores */
+    }
+}
+
+/* Celulares (até 480px) */
+@media (max-width: 480px) {
+    .header {
+        padding: 10px 15px;
+    }
+    .logo {
+        font-size: 20px;
+    }
+    .header nav {
+        gap: 10px;
+    }
+    .main-content {
+        padding: 15px;
+    }
+    .section-title {
+        font-size: 20px;
+    }
+    .produto-card {
+        padding: 10px;
+    }
+    .carrinho-lista {
+        padding: 10px;
+    }
+    .carrinho-item {
+        padding: 10px;
+    }
+    .carrinho-item img {
+        width: 150px;
+        height: 120px;
+    }
+    .carrinho-item .info h3 {
+        font-size: 16px;
+    }
+    .resumo-cliente {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+    .resumo-cliente img {
+        width: 60px;
+        height: 60px;
+    }
+    .link-documento {
+        margin-top: 10px; /* Adiciona espaço acima do botão PDF */
+        margin-left: 0;
+    }
+    .pedido-bloco {
+        padding: 15px;
+    }
+    .pedido-item {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+}
